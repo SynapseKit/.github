@@ -11,9 +11,9 @@ Async-native RAG, agents, and graph workflows. 2 dependencies. Zero magic.
 
 [![PyPI version](https://img.shields.io/pypi/v/synapsekit?color=0a7bbd&label=pypi&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
 [![Downloads](https://img.shields.io/pypi/dm/synapsekit?color=0a7bbd&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
-[![Python](https://img.shields.io/badge/python-3.14%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
-[![Tests](https://img.shields.io/badge/tests-332%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
+[![Tests](https://img.shields.io/badge/tests-1011%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
 [![GitHub Stars](https://img.shields.io/github/stars/SynapseKit/SynapseKit?style=social)](https://github.com/SynapseKit/SynapseKit)
 
 <br/>
@@ -79,29 +79,29 @@ print(rag.ask_sync("What is the main topic?"))
 <tr>
 <td align="center" width="33%">
 <h4>RAG Pipelines</h4>
-5 text splitters &bull; 7+ loaders<br/>
+5 text splitters &bull; 10+ loaders<br/>
 BM25 reranking &bull; conversation memory<br/>
 streaming retrieval-augmented generation
 </td>
 <td align="center" width="33%">
-<h4>Agents</h4>
+<h4>Agents & Multi-Agent</h4>
 ReAct &bull; native function calling<br/>
-OpenAI, Anthropic, Gemini, Mistral<br/>
-5 built-in tools &bull; fully extensible
+Supervisor/Worker &bull; Handoff &bull; Crew<br/>
+32 built-in tools &bull; fully extensible
 </td>
 <td align="center" width="33%">
 <h4>Graph Workflows</h4>
 parallel execution &bull; conditional routing<br/>
 cycle support &bull; checkpointing<br/>
-Mermaid export &bull; subgraphs
+SSE/WS streaming &bull; human-in-the-loop
 </td>
 </tr>
 <tr>
 <td align="center">
-<h4>9 LLM Providers</h4>
+<h4>13 LLM Providers</h4>
 OpenAI &bull; Anthropic &bull; Gemini<br/>
 Mistral &bull; Ollama &bull; Cohere<br/>
-Bedrock &bull; one interface, swap anytime
+Bedrock &bull; Groq &bull; DeepSeek &bull; more
 </td>
 <td align="center">
 <h4>5 Vector Stores</h4>
@@ -111,9 +111,9 @@ all behind VectorStore ABC
 </td>
 <td align="center">
 <h4>Production Ready</h4>
-LRU response caching<br/>
-exponential backoff retries<br/>
-332 tests &bull; MIT licensed
+Evaluation &bull; Observability &bull; Guardrails<br/>
+MCP &bull; A2A &bull; Multimodal<br/>
+1011 tests &bull; Apache 2.0 licensed
 </td>
 </tr>
 </table>
@@ -217,7 +217,7 @@ rag = RAG(model="ollama/llama3", api_key="")
 
 ### Growing fast
 
-**250+ open issues** &bull; **Contributors welcome** &bull; **MIT Licensed**
+**Contributors welcome** &bull; **Apache 2.0 Licensed**
 
 We're building the most comprehensive async-native LLM framework in Python.
 Whether you're a seasoned open-source contributor or looking for your first PR — jump in.
