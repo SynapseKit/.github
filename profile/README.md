@@ -13,7 +13,7 @@ Async-native RAG, agents, and graph workflows. 2 dependencies. Zero magic.
 [![Downloads](https://img.shields.io/pypi/dm/synapsekit?color=0a7bbd&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
-[![Tests](https://img.shields.io/badge/tests-1011%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
+[![Tests](https://img.shields.io/badge/tests-1305%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
 [![GitHub Stars](https://img.shields.io/github/stars/SynapseKit/SynapseKit?style=social)](https://github.com/SynapseKit/SynapseKit)
 
 <br/>
@@ -87,7 +87,7 @@ streaming retrieval-augmented generation
 <h4>Agents & Multi-Agent</h4>
 ReAct &bull; native function calling<br/>
 Supervisor/Worker &bull; Handoff &bull; Crew<br/>
-32 built-in tools &bull; fully extensible
+35 built-in tools &bull; fully extensible
 </td>
 <td align="center" width="33%">
 <h4>Graph Workflows</h4>
@@ -98,10 +98,10 @@ SSE/WS streaming &bull; human-in-the-loop
 </tr>
 <tr>
 <td align="center">
-<h4>13 LLM Providers</h4>
+<h4>19 LLM Providers</h4>
 OpenAI &bull; Anthropic &bull; Gemini<br/>
-Mistral &bull; Ollama &bull; Cohere<br/>
-Bedrock &bull; Groq &bull; DeepSeek &bull; more
+Mistral &bull; Ollama &bull; Cohere &bull; Bedrock<br/>
+Groq &bull; DeepSeek &bull; Vertex AI &bull; more
 </td>
 <td align="center">
 <h4>5 Vector Stores</h4>
@@ -113,7 +113,7 @@ all behind VectorStore ABC
 <h4>Production Ready</h4>
 Evaluation &bull; Observability &bull; Guardrails<br/>
 MCP &bull; A2A &bull; Multimodal<br/>
-1011 tests &bull; Apache 2.0 licensed
+1305 tests &bull; Apache 2.0 licensed
 </td>
 </tr>
 </table>
