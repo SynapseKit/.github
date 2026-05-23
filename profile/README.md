@@ -1,49 +1,95 @@
 <div align="center">
-
-# SynapseKit
-
-### Ship LLM apps faster.
-
-**Production-grade LLM framework for Python.**
-Async-native RAG, agents, and graph workflows. 2 dependencies. Zero magic.
-
-<br/>
-
-[![PyPI version](https://img.shields.io/pypi/v/synapsekit?color=0a7bbd&label=pypi&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
-[![Total Downloads](https://static.pepy.tech/badge/synapsekit)](https://pepy.tech/project/synapsekit)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
-[![Tests](https://img.shields.io/badge/tests-1450%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
-[![GitHub Stars](https://img.shields.io/github/stars/SynapseKit/SynapseKit?style=social)](https://github.com/SynapseKit/SynapseKit)
-
-<br/>
-
-[Documentation](https://synapsekit.github.io/synapsekit-docs/) &bull; [Quickstart](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/quickstart) &bull; [API Reference](https://synapsekit.github.io/synapsekit-docs/docs/api/llm) &bull; [Roadmap](https://synapsekit.github.io/synapsekit-docs/docs/roadmap) &bull; [Contributing](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
-
+  <img src="https://raw.githubusercontent.com/SynapseKit/SynapseKit/main/assets/banner.svg" alt="SynapseKit" width="100%"/>
 </div>
-
-<br/>
-
----
-
-<br/>
 
 <div align="center">
 
-### Why SynapseKit?
+[![PyPI version](https://img.shields.io/pypi/v/synapsekit?color=22c55e&label=pypi&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
+[![Python](https://img.shields.io/badge/python-3.10%2B-22c55e?logo=python&logoColor=white)](https://www.python.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
+[![Tests](https://img.shields.io/badge/tests-4139%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
+[![Downloads](https://static.pepy.tech/badge/synapsekit)](https://pepy.tech/project/synapsekit)
+[![Discord](https://img.shields.io/discord/1488136255597182988?logo=discord&logoColor=white&label=discord)](https://discord.gg/PSuAXHRywJ)
+
+**Build production LLM apps with 2 dependencies.**
+
+Async-native RAG, Agents, and Graph Workflows — no magic, no SaaS, no bloat.
+
+[**Docs**](https://synapsekit.github.io/synapsekit-docs/) · [**Quickstart**](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/quickstart) · [**Discord**](https://discord.gg/PSuAXHRywJ) · [**Contributing**](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
 
 </div>
+
+---
+
+```python
+from synapsekit import RAG
+
+rag = RAG(model="gpt-4o-mini", api_key="sk-...")
+rag.add("SynapseKit is a production-grade LLM framework.")
+
+async for token in rag.stream("What is SynapseKit?"):
+    print(token, end="", flush=True)
+```
+
+**That's it. Streaming RAG in 4 lines.**
+
+---
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center"><h3>33</h3>LLM Providers</td>
+<td align="center"><h3>53</h3>Document Loaders</td>
+<td align="center"><h3>11</h3>Vector Stores</td>
+<td align="center"><h3>48+</h3>Built-in Tools</td>
+<td align="center"><h3>4139</h3>Tests passing</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+## What's in this org
+
+| Repo | What it is |
+|---|---|
+| [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library — RAG, agents, graph workflows, 33 LLM providers |
+| [**SynapseKit/synapsekit-docs**](https://github.com/SynapseKit/synapsekit-docs) | Documentation site (Docusaurus), live at [synapsekit.github.io/synapsekit-docs](https://synapsekit.github.io/synapsekit-docs/) |
+| [**SynapseKit/evalci**](https://github.com/SynapseKit/evalci) | Hosted eval runner — run SynapseKit eval suites in CI via GitHub Action |
+
+---
+
+## Why SynapseKit
+
+> *"LangChain for people who hate LangChain."*
 
 <table>
 <tr>
 <td width="50%">
 
-**The problem:** Existing LLM frameworks are heavy — 50+ dependencies, hidden chains, magic callbacks, YAML configs. Hard to debug, harder to ship.
+**The problem:** LangChain and LlamaIndex are heavy — 50+ dependencies, hidden chains, magic callbacks, and basic observability locked behind a SaaS subscription.
 
-**The fix:** SynapseKit gives you everything you need to build production LLM apps with just **2 core dependencies** and plain Python you can actually read.
+**The fix:** SynapseKit gives you everything you need to build production LLM apps with **2 core dependencies** and plain Python you can actually read and debug.
 
 </td>
 <td width="50%">
+
+| | SynapseKit | LangChain |
+|---|---|---|
+| Hard deps | **2** | 50+ |
+| Async-native | **✅** | ⚠️ Partial |
+| Cost tracking | **✅ Built-in** | ❌ SaaS |
+| Stack traces | **Your code** | Framework |
+
+</td>
+</tr>
+</table>
+
+---
+
+## Get started
 
 ```bash
 pip install synapsekit[openai]
@@ -54,186 +100,23 @@ from synapsekit import RAG
 
 rag = RAG(model="gpt-4o-mini", api_key="sk-...")
 rag.add("Your document text here")
-print(rag.ask_sync("What is the main topic?"))
+print(rag.ask_sync("Summarise this."))
 ```
 
-**3 lines. That's it.**
-
-</td>
-</tr>
-</table>
-
-<br/>
+Full docs → [synapsekit.github.io/synapsekit-docs](https://synapsekit.github.io/synapsekit-docs/)
 
 ---
 
-<br/>
+## Contributing
+
+We welcome contributions of all sizes — new LLM providers, loaders, bug fixes, docs, and tests. Start here:
+
+1. Browse [good first issues](https://github.com/SynapseKit/SynapseKit/issues?q=label%3A%22good+first+issue%22)
+2. Read the [Contributing Guide](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
+3. Join [Discord](https://discord.gg/PSuAXHRywJ) to ask questions
 
 <div align="center">
 
-### What's inside
-
-</div>
-
-<table>
-<tr>
-<td align="center" width="33%">
-<h4>RAG Pipelines</h4>
-6 text splitters &bull; 18 loaders<br/>
-BM25 reranking &bull; conversation memory<br/>
-streaming retrieval-augmented generation
-</td>
-<td align="center" width="33%">
-<h4>Agents & Multi-Agent</h4>
-ReAct &bull; native function calling<br/>
-Supervisor/Worker &bull; Handoff &bull; Crew<br/>
-41 built-in tools &bull; fully extensible
-</td>
-<td align="center" width="33%">
-<h4>Graph Workflows</h4>
-parallel execution &bull; conditional routing<br/>
-cycle support &bull; checkpointing<br/>
-SSE/WS streaming &bull; human-in-the-loop
-</td>
-</tr>
-<tr>
-<td align="center">
-<h4>27 LLM Providers</h4>
-OpenAI &bull; Anthropic &bull; Gemini<br/>
-Mistral &bull; Ollama &bull; Cohere &bull; Bedrock<br/>
-Groq &bull; DeepSeek &bull; Vertex AI &bull; more
-</td>
-<td align="center">
-<h4>9 Vector Stores</h4>
-InMemory &bull; ChromaDB &bull; FAISS<br/>
-Qdrant &bull; Pinecone &bull; Weaviate<br/>
-PGVector &bull; Milvus &bull; LanceDB
-</td>
-<td align="center">
-<h4>Production Ready</h4>
-Evaluation &bull; Observability &bull; Guardrails<br/>
-MCP &bull; A2A &bull; Multimodal<br/>
-1450 tests &bull; Apache 2.0 licensed
-</td>
-</tr>
-</table>
-
-<br/>
-
----
-
-<br/>
-
-<div align="center">
-
-### See it in action
-
-</div>
-
-<table>
-<tr>
-<td width="50%">
-
-**RAG in 3 lines**
-
-```python
-from synapsekit import RAG
-
-rag = RAG(model="gpt-4o-mini", api_key="sk-...")
-rag.add("Your document text here")
-
-async for token in rag.stream("What is the main topic?"):
-    print(token, end="", flush=True)
-```
-
-</td>
-<td width="50%">
-
-**Agent with tools**
-
-```python
-from synapsekit import FunctionCallingAgent
-from synapsekit.agents.tools import CalculatorTool
-
-agent = FunctionCallingAgent(
-    llm=llm,
-    tools=[CalculatorTool()]
-)
-result = await agent.run("What is 42 * 17?")
-```
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**Graph workflow**
-
-```python
-from synapsekit import StateGraph
-
-graph = StateGraph()
-graph.add_node("fetch", fetch_data)
-graph.add_node("process", process_data)
-graph.add_edge("fetch", "process")
-graph.set_entry("fetch")
-graph.set_finish("process")
-
-app = graph.compile()
-result = await app.run({"query": "hello"})
-```
-
-</td>
-<td width="50%">
-
-**Swap providers in one line**
-
-```python
-from synapsekit import RAG
-
-# OpenAI
-rag = RAG(model="gpt-4o-mini", api_key="sk-...")
-
-# Anthropic
-rag = RAG(model="claude-3-haiku", api_key="sk-ant-...")
-
-# Ollama (local)
-rag = RAG(model="ollama/llama3", api_key="")
-
-# Same API. Same code. Different brain.
-```
-
-</td>
-</tr>
-</table>
-
-<br/>
-
----
-
-<br/>
-
-<div align="center">
-
-### Growing fast
-
-**Contributors welcome** &bull; **Apache 2.0 Licensed**
-
-We're building the most comprehensive async-native LLM framework in Python.
-Whether you're a seasoned open-source contributor or looking for your first PR — jump in.
-
-<br/>
-
-[**Star the repo**](https://github.com/SynapseKit/SynapseKit) &bull; [**Browse good first issues**](https://github.com/SynapseKit/SynapseKit/issues?q=label%3A%22good+first+issue%22) &bull; [**Join the discussion**](https://github.com/SynapseKit/SynapseKit/discussions)
-
-<br/>
-
-</div>
-
----
-
-<div align="center">
-
-[Documentation](https://synapsekit.github.io/synapsekit-docs/) &bull; [PyPI](https://pypi.org/project/synapsekit/) &bull; [Changelog](https://github.com/SynapseKit/SynapseKit/blob/main/CHANGELOG.md) &bull; [Contributing Guide](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
+**[⭐ Star the repo](https://github.com/SynapseKit/SynapseKit) if SynapseKit saves you time.**
 
 </div>
