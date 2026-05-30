@@ -15,7 +15,7 @@
 
 Async-native RAG, Agents, and Graph Workflows — no magic, no SaaS, no bloat.
 
-[**Docs**](https://synapsekit.github.io/synapsekit-docs/) · [**Quickstart**](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/quickstart) · [**Discord**](https://discord.gg/PSuAXHRywJ) · [**Contributing**](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
+[**Website**](https://synapse-kit.com) · [**Docs**](https://synapsekit.github.io/synapsekit-docs/) · [**Quickstart**](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/quickstart) · [**Discord**](https://discord.gg/PSuAXHRywJ) · [**Contributing**](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
 
 </div>
 
@@ -197,6 +197,7 @@ async for token in rag.stream("Summarise this."):
 |---|---|
 | [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library — RAG, agents, graph workflows, 33 LLM providers |
 | [**SynapseKit/synapsekit-docs**](https://github.com/SynapseKit/synapsekit-docs) | Documentation site (Docusaurus), live at [synapsekit.github.io/synapsekit-docs](https://synapsekit.github.io/synapsekit-docs/) |
+| [**SynapseKit/synapsekit-ui**](https://github.com/SynapseKit/synapsekit-ui) | Marketing website, live at [synapse-kit.com](https://synapse-kit.com) |
 | [**SynapseKit/evalci**](https://github.com/SynapseKit/evalci) | Hosted eval runner — run SynapseKit eval suites in CI via GitHub Action |
 
 ---
@@ -210,9 +211,17 @@ async for token in rag.stream("Summarise this."):
 | Hard deps | **2** | 50+ | 20+ |
 | Install size | **~5 MB** | ~200 MB+ | ~100 MB+ |
 | Async-native | **✅ Default** | ⚠️ Partial | ⚠️ Partial |
+| Streaming | **✅ Default** | ⚠️ Varies | ⚠️ Varies |
 | Cost tracking | **✅ Built-in** | ❌ SaaS | ❌ No |
-| Graph workflows | **✅ Built-in** | ✅ Separate pkg | ❌ No |
+| Evaluation / EvalCI | **✅ CLI + GitHub Action** | ❌ SaaS | ⚠️ Built-in |
+| Graph workflows | **✅ Built-in** | ⚠️ Separate pkg | ❌ No |
+| Agent federation | **✅ Built-in** | ❌ No | ❌ No |
+| Reasoning LLMs | **✅ Unified adapter** | ⚠️ Manual | ⚠️ Manual |
+| Structured output | **✅ Provider-agnostic** | ⚠️ Provider-specific | ⚠️ Provider-specific |
+| Agent memory | **✅ 4 built-in backends** | ⚠️ Community plugins | ⚠️ Community plugins |
+| Observability | **✅ Prometheus + Grafana** | ❌ No | ❌ No |
 | Stack traces | **Your code** | Framework internals | Framework internals |
+| License | **Apache 2.0** | MIT | MIT |
 
 ---
 
