@@ -7,7 +7,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/synapsekit?color=22c55e&label=pypi&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
 [![Python](https://img.shields.io/badge/python-3.10%2B-22c55e?logo=python&logoColor=white)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
-[![Tests](https://img.shields.io/badge/tests-4139%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
+[![Tests](https://img.shields.io/badge/tests-4737%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
 [![Downloads](https://static.pepy.tech/badge/synapsekit)](https://pepy.tech/project/synapsekit)
 [![Discord](https://img.shields.io/discord/1488136255597182988?logo=discord&logoColor=white&label=discord)](https://discord.gg/PSuAXHRywJ)
 
@@ -40,10 +40,10 @@ async for token in rag.stream("Summarise this."):
 <table>
 <tr>
 <td align="center"><h3>33</h3>LLM Providers</td>
-<td align="center"><h3>53</h3>Document Loaders</td>
-<td align="center"><h3>11</h3>Vector Stores</td>
-<td align="center"><h3>48+</h3>Built-in Tools</td>
-<td align="center"><h3>4139</h3>Tests passing</td>
+<td align="center"><h3>66</h3>Document Loaders</td>
+<td align="center"><h3>22</h3>Vector Stores</td>
+<td align="center"><h3>50+</h3>Built-in Tools</td>
+<td align="center"><h3>4737</h3>Tests passing</td>
 </tr>
 </table>
 
@@ -93,7 +93,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 53 Document Loaders
+## 66 Document Loaders
 
 <div align="center">
 
@@ -171,7 +171,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 11 Vector Stores
+## 22 Vector Stores
 
 <div align="center">
 
@@ -186,8 +186,28 @@ async for token in rag.stream("Summarise this."):
 ![LanceDB](https://img.shields.io/badge/LanceDB-F7B731?style=flat&logoColor=white)
 ![SQLite-vec](https://img.shields.io/badge/SQLite--vec-003B57?style=flat&logo=sqlite&logoColor=white)
 ![MongoDB Atlas](https://img.shields.io/badge/MongoDB%20Atlas-47A248?style=flat&logo=mongodb&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat&logo=elasticsearch&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat&logo=opensearch&logoColor=white)
+![Typesense](https://img.shields.io/badge/Typesense-1A1A2E?style=flat&logoColor=white)
+![Cassandra](https://img.shields.io/badge/Cassandra-1287B1?style=flat&logo=apachecassandra&logoColor=white)
+![Property Graph](https://img.shields.io/badge/Property%20Graph-6E56CF?style=flat&logoColor=white)
 
 </div>
+
+---
+
+## New in 2.0
+
+Version 2.0 focuses on **trust and autonomy in production**, plus a repo-wide hardening pass (42 audited security, reliability, and performance fixes).
+
+- **[Verifiable Agents](https://synapsekit.github.io/synapsekit-docs/docs/audit/)** — cryptographically signed, hash-chained audit trails (RFC 6962 Merkle, Ed25519 + KMS/BYOK) with a standalone verifier.
+- **[Living Memory](https://synapsekit.github.io/synapsekit-docs/docs/memory/living-memory)** — agents propose signed, diffable patches to their memory files instead of overwriting them.
+- **[Property Graph RAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/property-graph)** & **[WorldModelRAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/world-model)** — graph-fused and temporal/causal retrieval.
+- **[Personal Knowledge Mesh](https://synapsekit.github.io/synapsekit-docs/docs/mesh/)** — local-first indexing across every project, with a CLI and MCP tools.
+- **[AgentSwarm](https://synapsekit.github.io/synapsekit-docs/docs/agents/swarm)**, **[SelfImprovingAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/self-improving)**, **[NeuroSymbolicAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/neuro-symbolic)**, and an **[EdgeRuntime](https://synapsekit.github.io/synapsekit-docs/docs/edge/)** for local-first inference.
+
+Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/migration-2.0)**.
 
 ---
 
@@ -216,6 +236,7 @@ async for token in rag.stream("Summarise this."):
 | Evaluation / EvalCI | **✅ CLI + GitHub Action** | ❌ SaaS | ⚠️ Built-in |
 | Graph workflows | **✅ Built-in** | ⚠️ Separate pkg | ❌ No |
 | Agent federation | **✅ Built-in** | ❌ No | ❌ No |
+| Verifiable audit trails | **✅ Signed, hash-chained** | ❌ No | ❌ No |
 | Reasoning LLMs | **✅ Unified adapter** | ⚠️ Manual | ⚠️ Manual |
 | Structured output | **✅ Provider-agnostic** | ⚠️ Provider-specific | ⚠️ Provider-specific |
 | Agent memory | **✅ 4 built-in backends** | ⚠️ Community plugins | ⚠️ Community plugins |
