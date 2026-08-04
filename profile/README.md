@@ -39,7 +39,7 @@ async for token in rag.stream("Summarise this."):
 
 <table>
 <tr>
-<td align="center"><h3>33</h3>LLM Providers</td>
+<td align="center"><h3>35</h3>LLM Providers</td>
 <td align="center"><h3>66</h3>Document Loaders</td>
 <td align="center"><h3>22</h3>Vector Stores</td>
 <td align="center"><h3>50+</h3>Built-in Tools</td>
@@ -51,7 +51,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 33 LLM Providers
+## 35 LLM Providers
 
 <div align="center">
 
@@ -215,7 +215,7 @@ Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synap
 
 | Repo | What it is |
 |---|---|
-| [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library — RAG, agents, graph workflows, 33 LLM providers |
+| [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library — RAG, agents, graph workflows, 35 LLM providers |
 | [**SynapseKit/synapsekit-docs**](https://github.com/SynapseKit/synapsekit-docs) | Documentation site (Docusaurus), live at [synapsekit.github.io/synapsekit-docs](https://synapsekit.github.io/synapsekit-docs/) |
 | [**SynapseKit/synapsekit-ui**](https://github.com/SynapseKit/synapsekit-ui) | Marketing website, live at [synapse-kit.com](https://synapse-kit.com) |
 | [**SynapseKit/evalci**](https://github.com/SynapseKit/evalci) | Hosted eval runner — run SynapseKit eval suites in CI via GitHub Action |
