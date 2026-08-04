@@ -207,6 +207,8 @@ Version 2.0 focuses on **trust and autonomy in production**, plus a repo-wide ha
 - **[Personal Knowledge Mesh](https://synapsekit.github.io/synapsekit-docs/docs/mesh/)** — local-first indexing across every project, with a CLI and MCP tools.
 - **[AgentSwarm](https://synapsekit.github.io/synapsekit-docs/docs/agents/swarm)**, **[SelfImprovingAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/self-improving)**, **[NeuroSymbolicAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/neuro-symbolic)**, and an **[EdgeRuntime](https://synapsekit.github.io/synapsekit-docs/docs/edge/)** for local-first inference.
 
+**v2.0.1** (additive, no breaking changes) adds **[SynapseKit Live](https://synapsekit.github.io/synapsekit-docs/docs/observability/live)** (a zero-dependency real-time run dashboard), **[official Docker images](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/docker)**, **[OKF support](https://synapsekit.github.io/synapsekit-docs/docs/rag/okf)**, the **[Universal Memory Protocol](https://synapsekit.github.io/synapsekit-docs/docs/memory/universal-protocol)**, **[Digital Twin](https://synapsekit.github.io/synapsekit-docs/docs/agents/digital-twin)** and **[Time-Travel](https://synapsekit.github.io/synapsekit-docs/docs/agents/time-travel)** agents, a **[signed agent marketplace](https://synapsekit.github.io/synapsekit-docs/docs/agents/marketplace)**, and a security pass to **0 known vulnerabilities**.
+
 Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/migration-2.0)**.
 
 ---
