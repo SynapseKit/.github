@@ -5,15 +5,15 @@
 <div align="center">
 
 [![PyPI version](https://img.shields.io/pypi/v/synapsekit?color=22c55e&label=pypi&logo=pypi&logoColor=white)](https://pypi.org/project/synapsekit/)
-[![Python](https://img.shields.io/badge/python-3.10%2B-22c55e?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.11%2B-22c55e?logo=python&logoColor=white)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-22c55e)](https://github.com/SynapseKit/SynapseKit/blob/main/LICENSE)
-[![Tests](https://img.shields.io/badge/tests-4737%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
+[![Tests](https://img.shields.io/badge/tests-5400%2B%20passing-22c55e?logo=pytest&logoColor=white)](https://github.com/SynapseKit/SynapseKit)
 [![Downloads](https://static.pepy.tech/badge/synapsekit)](https://pepy.tech/project/synapsekit)
 [![Discord](https://img.shields.io/discord/1488136255597182988?logo=discord&logoColor=white&label=discord)](https://discord.gg/PSuAXHRywJ)
 
 **Build production LLM apps with 2 dependencies.**
 
-Async-native RAG, Agents, and Graph Workflows — no magic, no SaaS, no bloat.
+Async-native RAG, agents, and graph workflows. No magic, no SaaS, no bloat.
 
 [**Website**](https://synapse-kit.com) · [**Docs**](https://synapsekit.github.io/synapsekit-docs/) · [**Quickstart**](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/quickstart) · [**Discord**](https://discord.gg/PSuAXHRywJ) · [**Contributing**](https://github.com/SynapseKit/SynapseKit/blob/main/CONTRIBUTING.md)
 
@@ -39,11 +39,11 @@ async for token in rag.stream("Summarise this."):
 
 <table>
 <tr>
-<td align="center"><h3>35</h3>LLM Providers</td>
-<td align="center"><h3>66</h3>Document Loaders</td>
-<td align="center"><h3>22</h3>Vector Stores</td>
-<td align="center"><h3>50+</h3>Built-in Tools</td>
-<td align="center"><h3>4737</h3>Tests passing</td>
+<td align="center"><h3>46</h3>LLM Providers</td>
+<td align="center"><h3>83</h3>Document Loaders</td>
+<td align="center"><h3>32</h3>Vector Stores</td>
+<td align="center"><h3>56</h3>Built-in Tools</td>
+<td align="center"><h3>5400+</h3>Tests passing</td>
 </tr>
 </table>
 
@@ -51,7 +51,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 35 LLM Providers
+## 46 LLM Providers
 
 <div align="center">
 
@@ -93,7 +93,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 66 Document Loaders
+## 83 Document Loaders
 
 <div align="center">
 
@@ -171,7 +171,7 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## 22 Vector Stores
+## 32 Vector Stores
 
 <div align="center">
 
@@ -197,19 +197,20 @@ async for token in rag.stream("Summarise this."):
 
 ---
 
-## New in 2.0
+## What's New
 
-Version 2.0 focuses on **trust and autonomy in production**, plus a repo-wide hardening pass (42 audited security, reliability, and performance fixes).
+The 2.x line is about trust and autonomy in production: provable agent behavior, self-managing memory, richer retrieval, local-first operation, and policy enforcement at the LLM boundary.
 
-- **[Verifiable Agents](https://synapsekit.github.io/synapsekit-docs/docs/audit/)** — cryptographically signed, hash-chained audit trails (RFC 6962 Merkle, Ed25519 + KMS/BYOK) with a standalone verifier.
-- **[Living Memory](https://synapsekit.github.io/synapsekit-docs/docs/memory/living-memory)** — agents propose signed, diffable patches to their memory files instead of overwriting them.
-- **[Property Graph RAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/property-graph)** & **[WorldModelRAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/world-model)** — graph-fused and temporal/causal retrieval.
-- **[Personal Knowledge Mesh](https://synapsekit.github.io/synapsekit-docs/docs/mesh/)** — local-first indexing across every project, with a CLI and MCP tools.
+- **[Verifiable Agents](https://synapsekit.github.io/synapsekit-docs/docs/audit/)**: signed, hash-chained audit trails (Ed25519, pluggable KMS/BYOK) with a standalone verifier.
+- **Guardrails**: policy middleware for any LLM call, block/redact/flag/require-human modes, prompt-injection and jailbreak guards, PII redaction, HIPAA/GDPR/PCI-DSS rulepacks.
+- **[Living Memory](https://synapsekit.github.io/synapsekit-docs/docs/memory/living-memory)**: agents propose signed, diffable patches to their memory files instead of overwriting them.
+- **[Property Graph RAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/property-graph)** and **[WorldModelRAG](https://synapsekit.github.io/synapsekit-docs/docs/rag/world-model)**: graph-fused and temporal/causal retrieval.
+- **[Personal Knowledge Mesh](https://synapsekit.github.io/synapsekit-docs/docs/mesh/)**: local-first indexing across every project, with a CLI and MCP tools.
 - **[AgentSwarm](https://synapsekit.github.io/synapsekit-docs/docs/agents/swarm)**, **[SelfImprovingAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/self-improving)**, **[NeuroSymbolicAgent](https://synapsekit.github.io/synapsekit-docs/docs/agents/neuro-symbolic)**, and an **[EdgeRuntime](https://synapsekit.github.io/synapsekit-docs/docs/edge/)** for local-first inference.
+- Orchestration eval (loop, context-loss, and mis-routing detection for multi-agent runs), a dedicated embeddings/reranker provider layer, Hive Mode, Dream Mode, and an Ambient daemon.
+- **[SynapseKit Live](https://synapsekit.github.io/synapsekit-docs/docs/observability/live)**: a zero-dependency real-time run dashboard, plus **[official Docker images](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/docker)** and a signed agent marketplace.
 
-**v2.0.1** (additive, no breaking changes) adds **[SynapseKit Live](https://synapsekit.github.io/synapsekit-docs/docs/observability/live)** (a zero-dependency real-time run dashboard), **[official Docker images](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/docker)**, **[OKF support](https://synapsekit.github.io/synapsekit-docs/docs/rag/okf)**, the **[Universal Memory Protocol](https://synapsekit.github.io/synapsekit-docs/docs/memory/universal-protocol)**, **[Digital Twin](https://synapsekit.github.io/synapsekit-docs/docs/agents/digital-twin)** and **[Time-Travel](https://synapsekit.github.io/synapsekit-docs/docs/agents/time-travel)** agents, a **[signed agent marketplace](https://synapsekit.github.io/synapsekit-docs/docs/agents/marketplace)**, and a security pass to **0 known vulnerabilities**.
-
-Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/migration-2.0)**.
+Full history in the [CHANGELOG](https://github.com/SynapseKit/SynapseKit/blob/main/CHANGELOG.md). Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synapsekit-docs/docs/getting-started/migration-2.0)**.
 
 ---
 
@@ -217,10 +218,10 @@ Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synap
 
 | Repo | What it is |
 |---|---|
-| [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library — RAG, agents, graph workflows, 35 LLM providers |
+| [**SynapseKit/SynapseKit**](https://github.com/SynapseKit/SynapseKit) | The core library: RAG, agents, graph workflows, 46 LLM providers |
 | [**SynapseKit/synapsekit-docs**](https://github.com/SynapseKit/synapsekit-docs) | Documentation site (Docusaurus), live at [synapsekit.github.io/synapsekit-docs](https://synapsekit.github.io/synapsekit-docs/) |
 | [**SynapseKit/synapsekit-ui**](https://github.com/SynapseKit/synapsekit-ui) | Marketing website, live at [synapse-kit.com](https://synapse-kit.com) |
-| [**SynapseKit/evalci**](https://github.com/SynapseKit/evalci) | Hosted eval runner — run SynapseKit eval suites in CI via GitHub Action |
+| [**SynapseKit/evalci**](https://github.com/SynapseKit/evalci) | Hosted eval runner: run SynapseKit eval suites in CI via GitHub Action |
 
 ---
 
@@ -241,7 +242,7 @@ Upgrading? See the **[Migrating to 2.0 guide](https://synapsekit.github.io/synap
 | Verifiable audit trails | **✅ Signed, hash-chained** | ❌ No | ❌ No |
 | Reasoning LLMs | **✅ Unified adapter** | ⚠️ Manual | ⚠️ Manual |
 | Structured output | **✅ Provider-agnostic** | ⚠️ Provider-specific | ⚠️ Provider-specific |
-| Agent memory | **✅ 4 built-in backends** | ⚠️ Community plugins | ⚠️ Community plugins |
+| Agent memory | **✅ 10 built-in backends** | ⚠️ Community plugins | ⚠️ Community plugins |
 | Observability | **✅ Prometheus + Grafana** | ❌ No | ❌ No |
 | Stack traces | **Your code** | Framework internals | Framework internals |
 | License | **Apache 2.0** | MIT | MIT |
